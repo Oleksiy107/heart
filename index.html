@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Heart Code</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; }
+        pre { background: #333; color: #fff; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Python Heart Drawing with Turtle</h1>
+    <p>Here is the Python code to draw a heart for Valentine's Day:</p>
+    <pre>
+import turtle
+
+pen = turtle.Turtle()
+
+def curve():
+    for i in range(200):
+        pen.right(1)
+        pen.forward(1)
+
+def heart():
+    pen.fillcolor('red')
+    pen.begin_fill()
+    pen.left(140)
+    pen.forward(113)
+    curve()
+    pen.left(120)
+    curve()
+    pen.forward(112)
+    pen.end_fill()
+
+def txt():
+    pen.up()
+    pen.setpos(0, 95)
+    pen.down()
+    pen.color('lightgreen')
+    pen.write("З Днем святого Валентина", align="center", font=("Verdana", 12, "bold"))
+
+heart()
+txt()
+pen.ht()
+turtle.done()
+    </pre>
+</body>
+</html>
